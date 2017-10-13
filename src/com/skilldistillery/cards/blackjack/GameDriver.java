@@ -10,14 +10,15 @@ public class GameDriver {
 		String name = kb.next();
 		System.out.println(name + ", huh? Well, let's get started.");
 
-	Deck.dealCard();
+	Hand.fillHand();
+	
 	
 	kb.close();
 	}
 
 }
 /*  Greeting / name
- * 	
+ * 	Game prompts (stay, hold)
  * 
  * */
 

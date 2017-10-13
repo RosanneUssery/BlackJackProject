@@ -1,7 +1,5 @@
 package com.skilldistillery.cards.blackjack;
 
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class Card implements Comparable<Card>{
     private Rank rank;
@@ -31,7 +29,7 @@ public class Card implements Comparable<Card>{
 
 	@Override
     public String toString() {
-        return (rank + " of " + suit).toLowerCase();
+        return (rank + " of " + suit);
     }
 
     @Override

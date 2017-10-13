@@ -1,0 +1,20 @@
+List<PingPongBall> listOfBalls = new ArrayList<>();
+	
+	Map<String, Integer> balls = new HashMap<>();
+
+	public List<PingPongBall> generateListOfBalls(Map<String, Integer> listOfTeams ) {
+		Set<String> keys = listOfTeams.keySet();
+        
+        Iterator<String> it = keys.iterator();
+        while(it.hasNext()) {
+            String teamName = it.next();
+            Integer value = listOfTeams.get(teamName);
+          //  System.out.println(teamName + ": " + value);
+            for (int i = 0; i < value; i++) {
+				PingPongBall ppb = new PingPongBall(teamName);
+				listOfBalls.add(ppb);
+			}
+        }
+		//System.out.println(listOfBalls.size());
+		return listOfBalls;
+	}
