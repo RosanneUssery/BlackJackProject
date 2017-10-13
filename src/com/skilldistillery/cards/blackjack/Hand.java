@@ -15,12 +15,25 @@ public class Hand {
 			for (int j = 0; j < 2; j++) {
 				playerCard = d.dealCard();
 				x = playerCard.getRank().getValue();
-				System.out.println(playerCard + " " + x);
+				System.out.println(playerCard);
 				score = score + x;
 			}
 			//figure out how to get the score values out of the hand
 			System.out.println("Your score is " + score);
 		}
 		//System.out.println(playerCard);
+	}
+	public static void hitMe() {
+		Deck d = new Deck();
+		d.shuffle();
+		Card playerCard = null;
+		int x = 0;
+		int score = 0;
+		for (int j = 0; j < 1; j++) {
+			playerCard = d.dealCard();
+			x = playerCard.getRank().getValue();
+			System.out.println(playerCard);
+			score = score + x;
+		}
 	}
 }
