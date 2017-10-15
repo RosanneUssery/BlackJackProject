@@ -28,3 +28,5 @@ public class Deck {
 	}
 
 }
+/* The deck itself. Dealing/shuffling/adding/removing
+*/

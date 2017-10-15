@@ -20,9 +20,8 @@ public class Hand {
 			}
 			// figure out how to get the score values out of the hand
 		}
-		System.out.println("Your score is " + score);
+		//System.out.println("Your score is " + score);
 		return score;
-		// System.out.println(playerCard);
 	}
 
 	public static int hitMe(int score) {
@@ -38,4 +37,8 @@ public class Hand {
 		
 
 	}
+	
 }
+/*
+ * Card mechanics, hit/stay
+ */

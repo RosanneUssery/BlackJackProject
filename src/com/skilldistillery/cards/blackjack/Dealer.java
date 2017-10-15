@@ -1,5 +1,20 @@
 package com.skilldistillery.cards.blackjack;
 
-public class Dealer {
+import java.util.Scanner;
 
+public class Dealer {
+	public static int startGamePlayDealer() {
+		
+		int dealerScore = 0;
+		System.out.println("Dealer deals itself:");
+		dealerScore = Hand.fillHand();
+		System.out.println("Their score is " + dealerScore);
+		return dealerScore;
+		//String choice = null;
+
+	}
+	public static void stand() {
+		System.out.println("Dealer stands.");
+		
+	}
 }

@@ -6,33 +6,19 @@ public class GameDriver {
 
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
+		//add in story about an evil robot dealer. save the world, win the game.
 		System.out.println("Welcome, gambler. What's your name?");
 		String name = kb.next();
 		System.out.println(name + ", huh? Are you ready to play? (Y/N)");
 		String ready = kb.next();
-		int score = 0;
 
 		if (ready.equals("Y")) {
-			System.out.println("You are dealt:");
-			score = Hand.fillHand();
-			String choice = null;
-			// play again loop
-			do {
-				System.out.println("Would you like to hit, stay, or quit? (H/S/Q)");
-				choice = kb.next();
-				if (choice.equals("H")) {
-					score = Hand.hitMe(score);
-					if (score > 21) {
-						continue;
-					}
-					System.out.println("Your score is: " + score);
-
-				} else {
-					Table.stay();
-					break;
-				}
-
-			} while (choice.equals("H"));
+			int dealerScore = Player.startGamePlay();
+			int score = Dealer.startGamePlayDealer();
+			Table.contGamePlay(score);
+			Table.dealerPlay(dealerScore);
+			
+			//Player.playerScore(score);
 		} else {
 			System.out.println("A sore loser, eh? Well, we don't like your kind around these parts.");
 			kb.close();
@@ -42,4 +28,12 @@ public class GameDriver {
 /*
  * Greeting / name Game prompts (stay, hold)
  * 
+ */
+/* To do:
+ * Write sysout for if the dealer loses. Determine whether that means the player wins
+ * Sort out what happens if both dealer and player stand (if/else statements with boolean)
+ * Clean up the interface so that there aren't repeats of win/stand/etc
+ * write plot
+ * add ASCII/fix unicode
+ * clean up README
  */
