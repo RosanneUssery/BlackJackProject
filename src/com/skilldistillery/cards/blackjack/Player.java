@@ -7,24 +7,28 @@ public class Player {
 	public static boolean isWin() {
 		return win;
 	}
-	public boolean isLose() {
+	/*public boolean isLose() {
 		return lose;
-	}
+	}*/
 	public static void setWin(boolean win) {
 		Player.win = win;
 	}
+	/*}
 	public void setLose(boolean lose) {
 		this.lose = lose;
 	}
 
 	static boolean lose = false;
-
+*/
 public static int startGamePlay() {
 	int score = 0;
 
 	System.out.println("You are dealt:");
 	score = Hand.fillHand();
 	System.out.println("Your score is " + score);
+	if (score == 21) {
+		Player.win = true;
+	}
 
 	return score;
 
@@ -41,8 +45,8 @@ public boolean wins() {
 	
 }
 
-public boolean loses() {
+/*public boolean loses() {
 	lose = true;
 	return lose;
-}
+}*/
 }
