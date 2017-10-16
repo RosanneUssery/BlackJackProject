@@ -37,6 +37,19 @@ public class Hand {
 		
 
 	}
+	public static int dealerHitMe(int dealerScore) {
+		Deck d = new Deck();
+		d.shuffle();
+		Card playerCard = null;
+		int x = 0;
+		playerCard = d.dealCard();
+		x = playerCard.getRank().getValue();
+		System.out.println(playerCard);
+		dealerScore = dealerScore + x;
+		return dealerScore;
+		
+		
+	}
 	
 }
 /*

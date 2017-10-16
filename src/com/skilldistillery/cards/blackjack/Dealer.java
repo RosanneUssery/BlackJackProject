@@ -13,8 +13,11 @@ public class Dealer {
 		//String choice = null;
 
 	}
-	public static void stand() {
+	public static boolean stand() {
+		boolean dStand = true;
 		System.out.println("Dealer stands.");
-		
+		return dStand;
 	}
+	
+	
 }

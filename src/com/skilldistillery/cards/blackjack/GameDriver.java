@@ -13,11 +13,13 @@ public class GameDriver {
 		String ready = kb.next();
 
 		if (ready.equals("Y")) {
-			int dealerScore = Player.startGamePlay();
-			int score = Dealer.startGamePlayDealer();
+			int score = Player.startGamePlay();
+			int dealerScore = Dealer.startGamePlayDealer();
 			Table.contGamePlay(score);
-			Table.dealerPlay(dealerScore);
-			
+			if (Player.lose == false && Player.win == false){
+				Table.dealerPlay(dealerScore);
+			}
+			Table.winDetermine();
 			//Player.playerScore(score);
 		} else {
 			System.out.println("A sore loser, eh? Well, we don't like your kind around these parts.");
