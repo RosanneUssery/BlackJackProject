@@ -102,7 +102,7 @@ public class Table {
 		} else if (playerScore > 21) {
 			System.out.println("You bust!");
 		} else {
-			if (playerScore < 21 && playerScore < dealerScore) {
+			if (playerScore < 21 && playerScore > dealerScore) {
 				System.out.println("You lose");
 			} else if (playerScore == dealerScore) {
 				System.out.println("You draw");
