@@ -10,14 +10,10 @@ If win conditions are met, you win! If they are not, you can either bust or draw
 
 So far this program has been really challenging because of all the moving parts. The OO interface has been beneficial in letting me see how all the pieces fit together, but when something breaks, it's hard to tell where and how to fix it.
 
-In particular, the boolean structures are not working the way I intend them to, which is making it difficult to get the game working appropriately.
-
-As of 10/16, I appear to have broken the program to the point where it is not accomplishing most of the user stories in the assignment. I don't remember the last point where it worked, and so I'm not sure where to revert in GitHub.
+As of 10/30, I have it working to the basic requirements.
 
 My goals to continue are:
 
-* Fix the interface so that it reliably shows a winner
-* Hide the dealer's second card from the player until it is revealed during the dealer's turn
 * Allow multiple players in the game (both computer and human)
 * Implement a monetary system so players can place bets on their hands
 * Allow players to split hands
