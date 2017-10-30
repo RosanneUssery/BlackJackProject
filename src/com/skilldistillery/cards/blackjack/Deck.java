@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Deck {
 
-	static List<Card> deck = new ArrayList<>(52);
+	private List<Card> deck = new ArrayList<>(52);
 
 	public Deck() {
 		for (Suit s : Suit.values()) {

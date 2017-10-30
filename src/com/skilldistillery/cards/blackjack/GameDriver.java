@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class GameDriver {
 
 	public static void main(String[] args) {
+		Player player = new Player();
+		Dealer dealer = new Dealer();
+		Table table = new Table(player, dealer);
+		
 		Scanner kb = new Scanner(System.in);
 		// add in story about an evil robot dealer. save the world, win the game.
 		System.out.println("Welcome, gambler. What's your name?");
@@ -13,7 +17,11 @@ public class GameDriver {
 		String ready = kb.next();
 
 		if (ready.equals("Y")) {
-			int score = Player.startGamePlay();
+			table.startGamePlay();
+			table.gamePlay();
+			table.dealerPlay();
+			table.checkWin();
+			/*int score = Player.startGamePlay();
 			if (Player.win == false) {
 				int dealerScore = Dealer.startGamePlayDealer();
 				if (Dealer.dWin == false) {
@@ -24,7 +32,7 @@ public class GameDriver {
 					}
 				}
 			}
-			Table.winDetermine();
+			Table.winDetermine();*/
 			// Player.playerScore(score);
 		} else {
 			System.out.println("A sore loser, eh? Well, we don't like your kind around these parts.");

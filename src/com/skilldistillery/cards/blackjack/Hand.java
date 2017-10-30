@@ -1,6 +1,19 @@
 package com.skilldistillery.cards.blackjack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hand {
+	//holds onto cards -- storage vessel for same
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public static int fillHand() {
 		// need to create a method here to deal cards to each player

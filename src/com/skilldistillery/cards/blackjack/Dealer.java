@@ -1,11 +1,34 @@
 package com.skilldistillery.cards.blackjack;
 
-import java.util.Scanner;
 
-public class Dealer {
-	static boolean dWin = false;
-	public static int startGamePlayDealer() {
-		
+public class Dealer extends Player {
+
+	public Dealer(Deck deck) {
+		this.deck = deck;
+		deck.shuffle();
+	}
+
+	public Dealer() {
+		deck = new Deck();
+		deck.shuffle();
+	}
+
+	private Deck deck;
+
+	public Card dealACard() {
+		Card card = deck.dealCard();
+		return card;
+	}
+	
+	
+	
+	
+	
+	
+	
+
+	/*public int startGamePlayDealer() {
+
 		int dealerScore = 0;
 		System.out.println("Dealer deals itself:");
 		dealerScore = Hand.fillHand();
@@ -14,19 +37,14 @@ public class Dealer {
 			dWin = true;
 		}
 		return dealerScore;
-		//String choice = null;
+		// String choice = null;
 
 	}
-	public static boolean stand() {
+
+	public boolean stand() {
 		boolean dStand = true;
 		System.out.println("Dealer stands.");
 		return dStand;
-	}
-	
-	public boolean dWins() {
-		dWin = true;
-		return dWin;
-		
-	}
-	
+	}*/
+
 }
