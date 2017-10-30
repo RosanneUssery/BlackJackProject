@@ -14,6 +14,7 @@ public enum Rank {
 	    QUEEN(10), 
 	    KING(10), 
 	    ACE(11);
+		ACE(1);
 	
 	public final int value;
 	

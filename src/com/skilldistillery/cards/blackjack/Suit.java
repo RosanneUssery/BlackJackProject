@@ -1,10 +1,10 @@
 package com.skilldistillery.cards.blackjack;
 
 public enum Suit {
-	HEARTS('\u2660'), 
-	SPADES('\u2660'), 
-	CLUBS('\u2660'), 
-	DIAMONDS('\u2660'); 
+	HEARTS('\u2661'), 
+	SPADES('\u2664'), 
+	CLUBS('\u2667'), 
+	DIAMONDS('\u2662'); 
 	
 	  public final char pic;
 
@@ -16,6 +16,5 @@ public enum Suit {
 	        return pic;
 	    }
 	    
-	    //suit.ordinal()
 	
 }

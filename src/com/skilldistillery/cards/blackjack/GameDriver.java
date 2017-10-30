@@ -21,32 +21,9 @@ public class GameDriver {
 			table.gamePlay();
 			table.dealerPlay();
 			table.checkWin();
-			/*int score = Player.startGamePlay();
-			if (Player.win == false) {
-				int dealerScore = Dealer.startGamePlayDealer();
-				if (Dealer.dWin == false) {
-					Table.contGamePlay(score);
-
-					if (Player.win = false) {
-						Table.dealerPlay(dealerScore);
-					}
-				}
-			}
-			Table.winDetermine();*/
-			// Player.playerScore(score);
 		} else {
 			System.out.println("A sore loser, eh? Well, we don't like your kind around these parts.");
 			kb.close();
 		}
 	}
 }
-/*
- * Greeting / name Game prompts (stay, hold)
- * 
- */
-/*
- * To do: Write sysout for if the dealer loses. Determine whether that means the
- * player wins Sort out what happens if both dealer and player stand (if/else
- * statements with boolean) Clean up the interface so that there aren't repeats
- * of win/stand/etc write plot add ASCII/fix unicode clean up README
- */
